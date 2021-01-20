@@ -9,16 +9,23 @@ import Dashboard from './components/Dashboard'
 import { 
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Link
 } from 'react-router-dom';
-
-
 
 function App() {
   return (
+
     <Router>
+      <div>
+        <nav>
+          <Link to="/">Home Page</Link>
+          <Link to="/blog">My blog</Link>
+          <Link to="/contact"> Contact Me </Link>
+        </nav>
+      </div>
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <Home />
         </Route>
         <Route path="/contact">
