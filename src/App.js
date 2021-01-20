@@ -36,7 +36,7 @@ function App() {
         </Route>
         <Route path="/dashboard">
           <Dashboard />
-        </Route>  
+        </Route>
       </Switch>
     </Router>
   );
