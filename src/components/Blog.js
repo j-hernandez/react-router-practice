@@ -25,7 +25,9 @@ const blogPosts = [
 export default (props) => {
     // Now we have some room to deal with business logic
 
-    const { url } = useRouteMatch();
+    const { url, path } = useRouteMatch();
+
+    console.log(useRouteMatch());
 
     return (
         <>
@@ -42,6 +44,9 @@ export default (props) => {
                 ))
             }
         </nav>
+        <Route exact path={path}>
+            <h2>Click on a blog post</h2>
+        </Route>
         <Route path={`${url}/:id`}>
            <Post posts={blogPosts} /> 
         </Route>

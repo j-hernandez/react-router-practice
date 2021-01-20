@@ -10,7 +10,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  Redirect
 } from 'react-router-dom';
 
 function App() {
@@ -32,13 +33,17 @@ function App() {
           <Contact />
         </Route>
         <Route path="/blog">
-          <Blog />
-        </Route>
+            <Blog />
+          </Route>
         <Route path="/dashboard">
           <Dashboard />
         </Route>
+        <Route path="*">
+          <Redirect to="/dashboard" />
+        </Route>
       </Switch>
     </Router>
+            
   );
 }
 
